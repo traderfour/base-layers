@@ -1,8 +1,8 @@
 export default {
   meta: {
-    title: "Parsa Jiravand - Front-End Developer",
+    title: "Trader4 Base Layer",
     description:
-      "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies.",
+      "Trader4 Base Layer is a platform for creating and managing your own decentralized exchange. It is a fork of Uniswap V3, and is built on top of the Polygon network.",
   },
   index:{
     title:"Trader4 Base Layer"
