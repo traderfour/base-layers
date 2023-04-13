@@ -20,12 +20,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
     [
-      "@nuxtjs/color-mode",
-      {
-        classSuffix: "",
-      },
-    ],
-    [
       "@nuxtjs/i18n",
       {
         lazy: true,
