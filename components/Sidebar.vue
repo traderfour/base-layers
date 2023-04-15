@@ -288,7 +288,7 @@
   </aside>
 </template>
 <script setup>
-import SidebarItem from "~/utils/core/sidebar";
+import SidebarItem from "~/core/sidebar";
 // i18n
 const switchLocalePath = useSwitchLocalePath();
 </script>
