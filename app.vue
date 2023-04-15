@@ -4,9 +4,6 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
-import useBootstrap from "~/composables/bootstrap";
-
-onMounted(() => {
-  useBootstrap();
-});
+// setup app
+useBootstrap();
 </script>
