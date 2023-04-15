@@ -36,7 +36,6 @@
         </div>
       </main>
 
-      <SiteFooter />
     </Body>
   </Html>
 </template>
