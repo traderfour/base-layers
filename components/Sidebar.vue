@@ -516,7 +516,9 @@
   </aside>
 </template>
 <script setup>
+// i18n
 const switchLocalePath = useSwitchLocalePath();
+
 onMounted(() => {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
   if (
