@@ -32,7 +32,7 @@
     >
       <ul class="space-y-2">
         <li
-          v-for="(item, index) in SidebarItem"
+          v-for="(item, index) in sideBarItems"
           :key="index"
           :class="
             item.breakdown
@@ -97,7 +97,7 @@
     </div>
 
     <div
-      class="hidden rounded-2xl  -mt-6 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700"
+      class="hidden rounded-2xl -mt-6 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700"
     >
       <button
         id="theme-toggle"
@@ -288,7 +288,9 @@
   </aside>
 </template>
 <script setup>
-import SidebarItem from "~/core/sidebar";
+import SidebarItems from "~/core/sidebar";
+
+const sideBarItems = SidebarItems || [];
 // i18n
 const switchLocalePath = useSwitchLocalePath();
 </script>
