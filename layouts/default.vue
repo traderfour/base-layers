@@ -24,10 +24,10 @@
     <Body>
       <main class="container mx-auto">
         <div class="flex flex-row gap-10 relative">
-          <div class="basis-1/6">
+          <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
             <Sidebar />
           </div>
-          <div class="basis-5/6 mt-5 px-5">
+          <div class="mt-5 px-5" :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
             <Header></Header>
             <!-- Nuxt Pages -->
             <slot />
@@ -35,12 +35,12 @@
           </div>
         </div>
       </main>
-
     </Body>
   </Html>
 </template>
-<script setup >
-
+<script setup>
+// sidebar
+const sidebar = useSidebar();
 
 //route
 const route = useRoute();
@@ -83,8 +83,6 @@ const metaList = computed(() => [
     content: "https://avatars.githubusercontent.com/u/54263016?v=4",
   },
 ]);
-
-
 </script>
 <style lang="css">
 .rtl {
