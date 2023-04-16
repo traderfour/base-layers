@@ -746,6 +746,8 @@
   </header>
 </template>
 <script setup lang="ts">
+import { toggleSidebar } from "~/core/state";
+
 const sidebar = ref(false);
 const showSidebar = () => {
   sidebar.value = !sidebar.value;

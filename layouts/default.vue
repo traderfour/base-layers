@@ -21,8 +21,8 @@
         />
       </template>
     </Head>
-    <Body>
-      <main class="container mx-auto">
+    <Body class="dark:bg-gray-700 bg-gray-50">
+      <main class="container mx-auto ">
         <div class="flex flex-row gap-10 relative">
           <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
             <Sidebar />
@@ -39,6 +39,8 @@
   </Html>
 </template>
 <script setup>
+import { useSidebar } from "~/core/state";
+
 // sidebar
 const sidebar = useSidebar();
 
