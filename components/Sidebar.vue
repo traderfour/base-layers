@@ -249,7 +249,7 @@
             >
               <div class="inline-flex items-center">
                 <img
-                  src="/img/icon/ir.svg"
+                  src="../public/img/icon/ir.svg"
                   alt="trader4-farsi"
                   class="h-3.5 w-3.5 rounded-full mr-2"
                 />

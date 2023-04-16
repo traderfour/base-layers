@@ -7,7 +7,7 @@
         <div class="flex justify-start items-center">
           <button
             id="toggleSidebar"
-            @click="showSidebar()"
+            @click="sidebar = !sidebar"
             class="p-2 mr-3 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
           >
             <svg
@@ -746,11 +746,5 @@
   </header>
 </template>
 <script setup lang="ts">
-import { toggleSidebar } from "~/core/state";
-
-const sidebar = ref(false);
-const showSidebar = () => {
-  sidebar.value = !sidebar.value;
-  toggleSidebar(sidebar as Ref<boolean>);
-};
+import { sidebar } from "../core/state";
 </script>

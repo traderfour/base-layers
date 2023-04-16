@@ -22,12 +22,15 @@
       </template>
     </Head>
     <Body class="dark:bg-gray-700 bg-gray-50">
-      <main class="container mx-auto ">
+      <main class="container mx-auto">
         <div class="flex flex-row gap-10 relative">
           <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
             <Sidebar />
           </div>
-          <div class="mt-5 px-5" :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
+          <div
+            class="mt-5 px-5"
+            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'"
+          >
             <Header></Header>
             <!-- Nuxt Pages -->
             <slot />
@@ -39,10 +42,7 @@
   </Html>
 </template>
 <script setup>
-import { useSidebar } from "~/core/state";
-
-// sidebar
-const sidebar = useSidebar();
+import { sidebar } from "../core/state";
 
 //route
 const route = useRoute();
