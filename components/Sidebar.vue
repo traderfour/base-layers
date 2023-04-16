@@ -1,5 +1,7 @@
 <template>
-  <aside class="absolute top-24 mx-5 lg:mx-0 lg:top-5 left-0 z-40 w-64 rtl:right-0" >
+  <aside
+    class="absolute top-24 mx-5 lg:mx-0 lg:top-5 left-0 z-40 w-64 rtl:right-0"
+  >
     <div
       class="overflow-y-auto pt-5 pb-8 px-3 rounded-2xl bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
     >
@@ -262,7 +264,6 @@
 </template>
 <script setup>
 import SidebarItems from "~/core/sidebar";
-
 
 const sideBarItems = SidebarItems || [];
 // i18n
