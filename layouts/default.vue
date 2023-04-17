@@ -1,5 +1,6 @@
 <template>
   <Html :lang="locale" :dir="head.htmlAttrs?.dir">
+    <CookiePopup />
     <Head>
       <Title>{{ title }}</Title>
 
@@ -22,7 +23,9 @@
       </template>
     </Head>
     <Body class="dark:bg-gray-700 bg-gray-50">
+
       <main class="container mx-auto">
+
         <div class="flex flex-row gap-10 relative">
           <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
             <Sidebar />
