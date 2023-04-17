@@ -21,6 +21,12 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     'nuxt-icon',
     [
+      "@nuxtjs/color-mode",
+      {
+        classSuffix: "",
+      },
+    ],
+    [
       "@nuxtjs/i18n",
       {
         lazy: true,
