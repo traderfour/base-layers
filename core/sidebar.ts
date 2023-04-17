@@ -3,6 +3,7 @@
 interface SidebarItem {
   name: string;
   icon: string;
+  route?: string;
   childern?: SidebarItem[];
   counts?: number;
   breakdown?: boolean;
@@ -10,8 +11,19 @@ interface SidebarItem {
 
 export default <SidebarItem[]>[
   {
-    name: "Core",
-    icon: "mdi:desktop-mac-dashboard",
+    name: "Sign",
+    icon: "mdi:account-lock-open",
+    route: "/sign",
+  },
+  {
+    name: "Pricing",
+    icon: "mdi:cash-usd",
+    route: "/pricing",
+  },
+  {
+    name: "Help",
+    icon: "mdi:account-question-outline",
+    route: "/help",
   },
   {
     name: "Pages",

@@ -15,9 +15,9 @@
               : ''
           "
         >
-          <a
+          <nuxt-link
             v-if="!item.childern?.length"
-            href="#"
+            :to="{ path: item.route || '/' }"
             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
           >
             <Icon :name="item.icon" />
@@ -30,7 +30,7 @@
             >
               {{ item.counts }}
             </span>
-          </a>
+          </nuxt-link>
 
           <div v-if="item.childern?.length">
             <button
@@ -59,10 +59,10 @@
             </button>
             <ul :id="`dropdown-${index}`" class="hidden py-2 space-y-2">
               <li v-for="(child, i) in item.childern" :key="i">
-                <a
-                  href="#"
+                <nuxt-link
+                  :to="{ path: child.route || '/' }"
                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                  >{{ child.name }}</a
+                  >{{ child.name }}</nuxt-link
                 >
               </li>
             </ul>
@@ -254,9 +254,9 @@
   </aside>
 </template>
 <script setup>
-import SidebarItems from "~/core/sidebar";
+import sidebar from "~/core/sidebar";
 
-const sideBarItems = SidebarItems || [];
+const sideBarItems = sidebar || [];
 // color mode
 const colorMode = useColorMode();
 onMounted(() => {
