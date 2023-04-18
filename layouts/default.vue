@@ -31,11 +31,11 @@
           </div>
           <div
             class="mt-5 px-5"
-            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'"
+            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6 w-1/2 '"
           >
             <Header></Header>
             <!-- Nuxt Pages -->
-            <div class="container">
+            <div class="container  ">
               <slot />
             </div>
             <!-- Nuxt Pages -->

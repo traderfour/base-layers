@@ -11,6 +11,16 @@ interface SidebarItem {
 
 export default <SidebarItem[]>[
   {
+    name: "Home",
+    icon: "mdi:home",
+    route: "/",
+  },
+  {
+    name: "Products",
+    icon: "mdi:package-variant-closed",
+    route: "/my/products",
+  },
+  {
     name: "Sign",
     icon: "mdi:account-lock-open",
     route: "/sign",
