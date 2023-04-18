@@ -21,6 +21,11 @@ export default <SidebarItem[]>[
     route: "/pricing",
   },
   {
+    name: "products",
+    icon: "mdi:chart-line",
+    route: "/my/products",
+  },
+  {
     name: "Help",
     icon: "mdi:account-question-outline",
     route: "/help",
