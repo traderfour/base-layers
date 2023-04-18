@@ -11,29 +11,36 @@
         :name="meta.name"
         :content="meta.content"
         v-for="(meta, index) in metaList"
-        :key="index" />
+        :key="index"
+      />
       <template v-for="link in head.link" :key="link.id">
         <Link
           :id="link.id"
           :rel="link.rel"
           :href="link.href"
-          :hreflang="link.hreflang" />
+          :hreflang="link.hreflang"
+        />
       </template>
     </Head>
     <Body class="dark:bg-gray-700 bg-gray-50">
-      <main class="container mx-auto">
+      <main class="container app-container mx-auto">
         <div class="flex flex-row gap-10 relative">
           <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
             <Sidebar />
           </div>
           <div
             class="mt-5 px-5"
-            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
+            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'"
+          >
             <Header></Header>
             <!-- Nuxt Pages -->
-            <slot />
+            <div class="container">
+              <slot />
+            </div>
             <!-- Nuxt Pages -->
-            <Footer />
+            <div class="my-8">
+              <Footer />
+            </div>
           </div>
         </div>
       </main>
@@ -41,7 +48,7 @@
   </Html>
 </template>
 <script setup>
-import { sidebar } from "../core/state";
+import { sidebar } from "../composables/state";
 
 //route
 const route = useRoute();
@@ -88,5 +95,10 @@ const metaList = computed(() => [
 <style lang="css">
 .rtl {
   direction: rtl;
+}
+@media screen and (min-width: 2200px) {
+ .app-container aside{
+  margin-left: -10rem;
+ }
 }
 </style>

@@ -746,5 +746,6 @@
   </header>
 </template>
 <script setup lang="ts">
-import { sidebar } from "../core/state";
+import { sidebar } from "../composables/state";
+
 </script>
