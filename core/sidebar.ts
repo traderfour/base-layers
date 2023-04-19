@@ -44,14 +44,17 @@ export default <SidebarItem[]>[
     name: "Messages",
     icon: "mdi:android-messages",
     counts: 69,
+    route: "/messages",
   },
   {
     name: "Docs",
     icon: "mdi:file-code-outline",
     breakdown: true,
+    route: "/docs",
   },
   {
     name: "Components",
     icon: "mdi:video-input-component",
+    route: "/components",
   },
 ];
