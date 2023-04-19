@@ -8,7 +8,8 @@
             ? 'pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700'
             : ''
         ">
-          <nuxt-link v-if="!item.childern?.length" :to="localePath({ path: item.route || '/' })"
+          <nuxt-link active-class="text-blue-700 dark:!text-blue-500" v-if="!item.childern?.length"
+            :to="{ path: item.route || '/' }"
             class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
             <Icon :name="item.icon" />
 
@@ -38,7 +39,7 @@
             </button>
             <ul :id="`dropdown-${index}`" class="hidden py-2 space-y-2">
               <li v-for="(child, i) in item.childern" :key="i">
-                <nuxt-link :to="{ path: child.route || '/' }"
+                <nuxt-link active-class="text-blue-700" :to="{ path: child.route || '/' }"
                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{
                     child.name }}</nuxt-link>
               </li>
