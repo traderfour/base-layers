@@ -15,10 +15,10 @@
 
   <Body class="dark:bg-gray-700 bg-gray-50">
     <main class="container mx-auto">
-      <div class="flex flex-row gap-10 relative">
-        <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
+      <div>
+        <!-- <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
           <Sidebar />
-        </div>
+        </div> -->
         <div class="mt-5 px-5" :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
           <Announcement />
           <Header></Header>
@@ -37,8 +37,8 @@
 
   </Html>
 </template>
-<script setup>
-import { sidebar } from "../core/state";
+<script lang="ts" setup>
+import sidebar from "../core/sidebar";
 import { PropType } from "vue";
 
 //route
