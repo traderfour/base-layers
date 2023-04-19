@@ -8,13 +8,14 @@
       <p class="text-sm font-medium text-gray-900 md:my-0 dark:text-white">
         <span
           class="hidden md:inline-flex bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
-          >New</span
+          >{{ item.badge }}</span
         >
-        We have launched Flowbite Blocks including over 120+ website sections!
-        <a
+        <!-- We have launched Flowbite Blocks including over 120+ website sections! -->
+        {{ item.title }}
+        <!-- <a
           href="#"
           class="inline-flex items-center ml-0 text-sm font-medium text-blue-600 md:ml-2 dark:text-blue-500 hover:underline">
-          Check it out
+          {{ item.link.text }}
           <svg
             class="ml-1 w-4 h-4 text-blue-600 dark:text-blue-500"
             fill="currentColor"
@@ -25,7 +26,22 @@
               d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
               clip-rule="evenodd"></path>
           </svg>
-        </a>
+        </a> -->
+        <NuxtLink
+          class="inline-flex items-center ml-0 text-sm font-medium text-blue-600 md:ml-2 dark:text-blue-500 hover:underline"
+          :to="item.link.src">
+          {{ item.link.text }}
+          <svg
+            class="ml-1 w-4 h-4 text-blue-600 dark:text-blue-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </NuxtLink>
       </p>
     </div>
     <button
@@ -46,3 +62,23 @@
   </div>
   <!-- Block end -->
 </template>
+
+<script setup lang="ts">
+interface IAnnouncement {
+  title: string;
+  badge: string;
+  link: ILink;
+}
+interface ILink {
+  text: "string";
+  src: "string";
+}
+const item = ref<IAnnouncement>({
+  title: "Hello ! here is the announcement test from the briofy",
+  badge: "new",
+  link: {
+    text: "Homepage",
+    src: "/",
+  },
+});
+</script>

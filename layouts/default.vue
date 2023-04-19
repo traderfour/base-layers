@@ -42,6 +42,7 @@
 </template>
 <script setup>
 import { sidebar } from "../core/state";
+import { PropType } from "vue";
 
 //route
 const route = useRoute();
