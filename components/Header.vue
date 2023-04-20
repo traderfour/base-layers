@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header class="sticky z-20 top-0">
     <nav
-      class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 rounded-xl"
+      class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 rounded-xl shadow-lg"
     >
       <div
         class="flex flex-wrap md:justify-between justify-center items-center"
@@ -18,7 +18,7 @@
 
           <NuxtLink :to="localepath('/')" class="flex mr-4">
             <img
-              class="w-20 h-20"
+              class="md:h-20 md:w-20 h-16 w-16"
               src="../public/img/logo-text.svg"
               alt="Trader4 logo"
             />
