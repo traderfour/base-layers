@@ -49,10 +49,11 @@
               </div>
               <input
                 type="text"
-                name="email"
+                name="search"
                 id="topbar-search"
                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Search"
+                placeholder="Search (Ctrl+K)"
+                ref="searchInput"
               />
             </div>
           </form>
@@ -879,6 +880,7 @@ import { sidebar } from "../composables/state";
 const localepath = useLocalePath();
 
 const sideBarItems = sidebar || [];
+const searchInput = ref();
 // color mode
 const colorMode = useColorMode();
 onMounted(() => {
@@ -888,6 +890,14 @@ onMounted(() => {
   if (color === "system" || !color) {
     colorMode.preference = "light";
   }
+
+  // Ctrl K press to focus search input
+  document.addEventListener("keypress", (event: any) => {
+    if (event.ctrlKey && (event.keyCode == 83 || event.keyCode == 11)) {
+      searchInput.value.focus();
+      event.preventDefault();
+    }
+  });
 });
 // i18n
 const switchLocalePath = useSwitchLocalePath();
