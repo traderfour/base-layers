@@ -18,15 +18,15 @@
 
           <NuxtLink :to="localepath('/')" class="flex mr-4">
             <img
-              class="w-8 h-8"
-              src="../public/img/logo.svg"
+              class="w-20 h-20"
+              src="../public/img/logo-text.svg"
               alt="Trader4 logo"
             />
-            <span
+            <!-- <span
               class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
             >
               Trader4
-            </span>
+            </span> -->
           </NuxtLink>
           <form action="#" method="GET" class="hidden lg:block lg:pl-2">
             <label for="topbar-search" class="sr-only">Search</label>
