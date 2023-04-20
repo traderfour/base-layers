@@ -1,40 +1,47 @@
 <template>
   <Html :lang="locale" :dir="head.htmlAttrs?.dir">
+    <Head>
+      <Title>{{ title }}</Title>
 
-  <Head>
-    <Title>{{ title }}</Title>
+      <Meta name="description" :content="description" />
+      <Meta name="og:description" :content="description" />
+      <Meta name="twitter:description" :content="description" />
+      <Meta
+        :name="meta.name"
+        :content="meta.content"
+        v-for="(meta, index) in metaList"
+        :key="index" />
+      <template v-for="link in head.link" :key="link.id">
+        <Link
+          :id="link.id"
+          :rel="link.rel"
+          :href="link.href"
+          :hreflang="link.hreflang" />
+      </template>
+    </Head>
 
-    <Meta name="description" :content="description" />
-    <Meta name="og:description" :content="description" />
-    <Meta name="twitter:description" :content="description" />
-    <Meta :name="meta.name" :content="meta.content" v-for="(meta, index) in metaList" :key="index" />
-    <template v-for="link in head.link" :key="link.id">
-      <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
-    </template>
-  </Head>
-
-  <Body class="dark:bg-gray-700 bg-gray-50">
-    <main class="container mx-auto">
-      <div>
-        <!-- <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
+    <Body class="dark:bg-gray-700 bg-gray-50">
+      <main class="container mx-auto">
+        <div>
+          <!-- <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
           <Sidebar />
         </div> -->
-        <div class="mt-5 px-5" :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
-          <Announcement />
-          <Header></Header>
-          <!-- Nuxt Pages -->
-          <div class="container  ">
-            <slot />
-          </div>
-          <!-- Nuxt Pages -->
-          <div class="my-8">
-            <Footer />
+          <div
+            class="mt-5 px-5"
+            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
+            <Header></Header>
+            <!-- Nuxt Pages -->
+            <div class="container">
+              <slot />
+            </div>
+            <!-- Nuxt Pages -->
+            <div class="my-8">
+              <Footer />
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-  </Body>
-
+      </main>
+    </Body>
   </Html>
 </template>
 <script lang="ts" setup>
@@ -88,8 +95,8 @@ const metaList = computed(() => [
   direction: rtl;
 }
 @media screen and (min-width: 2200px) {
- .app-container aside{
-  margin-left: -10rem;
- }
+  .app-container aside {
+    margin-left: -10rem;
+  }
 }
 </style>
