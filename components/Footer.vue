@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-white dark:bg-gray-800 rounded-sm">
-    <div class="p-4 py-5 mx-auto lg:-10">
+    <div class="p-4 mx-auto lg:-10">
       <div class="grid grid-cols-2 gap-8 lg:grid-cols-6">
         <div class="col-span-2">
           <NuxtLink
@@ -81,9 +81,7 @@
           </ul>
         </div>
       </div>
-      <hr
-        class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
-      />
+      <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
       <div class="rounded-sm sm:flex sm:items-center sm:justify-between px-2">
         <p
           class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"

@@ -2,7 +2,7 @@
   <header class="sticky z-20 top-0">
     <Announcement />
     <nav
-      class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800 rounded-sm shadow-lg"
+      class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800 shadow-md"
     >
       <div
         class="flex flex-wrap md:justify-between justify-center items-center"
@@ -91,7 +91,7 @@
             </svg>
           </button> -->
           <div
-            class="rounded-2xl justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
+            class="rounded-sm justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
           >
             <button
               v-if="colorMode.preference === 'light'"

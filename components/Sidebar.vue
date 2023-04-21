@@ -3,7 +3,7 @@
     class="absolute top-24 mx-5 lg:mx-0 lg:top-5 left-0 z-40 w-64 rtl:right-0"
   >
     <div
-      class="overflow-y-auto pt-5 pb-8 px-3 rounded-2xl bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+      class="overflow-y-auto pt-5 pb-8 px-3 rounded-sm bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
     >
       <ul class="space-y-2">
         <li
@@ -74,7 +74,7 @@
     </div>
 
     <div
-      class="hidden rounded-2xl -mt-6 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700"
+      class="hidden rounded-sm -mt-6 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700"
     >
       <button
         v-if="colorMode.preference === 'light'"
