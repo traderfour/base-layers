@@ -10,37 +10,35 @@
         :name="meta.name"
         :content="meta.content"
         v-for="(meta, index) in metaList"
-        :key="index" />
+        :key="index"
+      />
       <template v-for="link in head.link" :key="link.id">
         <Link
           :id="link.id"
           :rel="link.rel"
           :href="link.href"
-          :hreflang="link.hreflang" />
+          :hreflang="link.hreflang"
+        />
       </template>
     </Head>
 
     <Body class="dark:bg-gray-700 bg-gray-50">
-      <main class="container mx-auto">
+      <Header></Header>
+      <main>
         <div>
           <!-- <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
           <Sidebar />
         </div> -->
-          <div
-            class="mt-5 px-5"
-            :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'">
-            <Header></Header>
-            <!-- Nuxt Pages -->
-            <div class="container">
-              <slot />
-            </div>
-            <!-- Nuxt Pages -->
-            <div class="my-8">
-              <Footer />
-            </div>
+          <!-- <div :class="!sidebar ? 'md:flex-auto' : 'md:basis-5/6'"> -->
+          <!-- Nuxt Pages -->
+          <div class="container mx-auto px-4">
+            <slot />
           </div>
+          <!-- Nuxt Pages -->
+          <!-- </div> -->
         </div>
       </main>
+      <Footer />
     </Body>
   </Html>
 </template>
