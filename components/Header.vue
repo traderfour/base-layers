@@ -2,7 +2,7 @@
   <header class="sticky z-20 top-0">
     <Announcement />
     <nav
-      class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 rounded-xl shadow-lg">
+      class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800 rounded-sm shadow-lg">
       <div
         class="flex flex-wrap md:justify-between justify-center items-center">
         <div class="flex justify-start items-center">
@@ -46,7 +46,7 @@
                 type="text"
                 name="search"
                 id="topbar-search"
-                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search (Ctrl+K)"
                 ref="searchInput" />
             </div>
@@ -154,7 +154,7 @@
             </button>
             <!-- Dropdown -->
             <div
-              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+              class="hidden z-50 my-4 text-base list-none bg-white rounded-lg divide-y divide-gray-100 shadow dark:bg-gray-700"
               id="language-dropdown">
               <ul class="py-1" role="none">
                 <li>

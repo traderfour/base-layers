@@ -3,7 +3,7 @@
   <div
     id="banner"
     tabindex="-1"
-    class="flex justify-between rounded-lg top-0 py-3 px-4 w-full bg-white border border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
+    class="flex justify-between rounded-sm top-0 py-3 px-4 w-full bg-white border border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
     <div class="flex items-center mx-auto">
       <p class="text-sm font-medium text-gray-900 md:my-0 dark:text-white">
         <span
