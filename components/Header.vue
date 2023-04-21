@@ -776,8 +776,11 @@ onMounted(() => {
   }
 
   // Ctrl K press to focus search input
-  document.addEventListener("keypress", (event: any) => {
-    if (event.ctrlKey && (event.keyCode == 83 || event.keyCode == 11)) {
+  document.addEventListener("keydown", (event: any) => {
+    if (
+      event.ctrlKey &&
+      (event.keyCode == 83 || event.keyCode == 11 || event.keyCode == 75)
+    ) {
       searchInput.value.focus();
       event.preventDefault();
     }
