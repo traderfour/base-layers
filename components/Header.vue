@@ -149,13 +149,13 @@
                     :to="switchLocalePath(localeItem.lang)"
                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
                     role="menuitem"
+                    @click="switchActiveLocale(localeIndex)"
                   >
                     <div class="inline-flex items-center">
                       <img
                         class="h-3.5 w-3.5 rounded-full mr-2"
                         :src="localeItem.flagSrc"
                         :alt="localeItem.text"
-                        @click="switchActiveLocale(localeIndex)"
                       />
                       {{ localeItem.text }}
                     </div>
@@ -844,6 +844,16 @@ const localeItems = ref([
     lang: "fa",
     flagSrc: "/img/icon/ir.svg",
     text: "Farsi",
+  },
+  {
+    lang: "ar",
+    flagSrc: "/img/icon/ar.svg",
+    text: "Arabic",
+  },
+  {
+    lang: "tr",
+    flagSrc: "/img/icon/tr.svg",
+    text: "Turkish",
   },
 ]);
 
