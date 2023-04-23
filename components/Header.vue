@@ -17,10 +17,15 @@
             </svg>
           </button> -->
 
-          <NuxtLink :to="localepath('/')" class="flex mr-4">
+          <NuxtLink :to="localepath('/')" class="flex mr-4 rtl: ml-2">
             <img
-              class="md:h-20 md:w-20 h-16 w-16"
+              class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
               src="../public/img/logo-text.svg"
+              alt="Trader4 logo"
+            />
+            <img
+              class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
+              src="../public/img/logo-text-dark.svg"
               alt="Trader4 logo"
             />
             <!-- <span
@@ -153,7 +158,7 @@
                   >
                     <div class="inline-flex items-center">
                       <img
-                        class="h-3.5 w-3.5 rounded-full mr-2"
+                        class="h-3.5 w-3.5 rounded-full me-2"
                         :src="localeItem.flagSrc"
                         :alt="localeItem.text"
                       />

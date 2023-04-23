@@ -8,10 +8,16 @@
             class="flex items-center mb-2 text-2xl font-semibold text-gray-900 sm:mb-0 dark:text-white"
           >
             <img
-              class="block md:m-0 mx-auto"
+              class="block md:m-0 mx-auto dark:hidden"
               width="150"
               height="150"
               src="../public/img/logo-text.svg"
+            />
+            <img
+              class="  md:m-0 mx-auto hidden dark:block"
+              width="150"
+              height="150"
+              src="../public/img/logo-text-dark.svg"
             />
           </NuxtLink>
           <p class="my-4 font-light text-gray-500 dark:text-gray-400">
