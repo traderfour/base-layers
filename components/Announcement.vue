@@ -8,7 +8,7 @@
     <div class="flex items-center mx-auto">
       <p class="text-sm font-medium text-gray-900 md:my-0 dark:text-white">
         <span
-          class="hidden md:inline-flex bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800"
+          class="hidden md:inline-flex rtl:ml-2 bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800"
           >{{ item.badge }}</span
         >
         <!-- We have launched Flowbite Blocks including over 120+ website sections! -->
@@ -29,7 +29,7 @@
           </svg>
         </a> -->
         <NuxtLink
-          class="inline-flex items-center ml-0 text-sm font-medium text-blue-600 md:ml-2 dark:text-blue-500 hover:underline"
+          class="inline-flex items-center ml-0 rtl:mr-2 text-sm font-medium text-blue-600 md:ml-2 dark:text-blue-500 hover:underline"
           :to="item.link.src"
         >
           {{ item.link.text }}

@@ -38,10 +38,10 @@
             <label for="topbar-search" class="sr-only">Search</label>
             <div class="relative mt-1 lg:w-96">
               <div
-                class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                class="flex absolute inset-y-0 left-0 rtl:right-2 items-center pl-3 pointer-events-none"
               >
                 <svg
-                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400  rtl:rotate-90"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@
                 type="text"
                 name="search"
                 id="topbar-search"
-                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded-sm outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search (Ctrl+K)"
                 ref="searchInput"
               />
@@ -231,7 +231,7 @@
                 </div>
                 <div class="pl-3 w-full">
                   <div
-                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                    class="text-gray-500 font-normal text-sm mb-1.5 rtl:mr-3 dark:text-gray-400"
                   >
                     New message from
                     <span class="font-semibold text-gray-900 dark:text-white"
@@ -239,7 +239,7 @@
                     >: "Hey, what's up? All set for the presentation?"
                   </div>
                   <div
-                    class="text-xs font-medium text-primary-700 dark:text-primary-400"
+                    class="text-xs font-medium text-primary-700 rtl:mr-3 dark:text-primary-400"
                   >
                     a few moments ago
                   </div>
@@ -273,7 +273,7 @@
                 </div>
                 <div class="pl-3 w-full">
                   <div
-                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                    class="text-gray-500 font-normal text-sm mb-1.5 rtl:mr-3 dark:text-gray-400"
                   >
                     <span class="font-semibold text-gray-900 dark:text-white"
                       >Jese leos</span
@@ -285,7 +285,7 @@
                     started following you.
                   </div>
                   <div
-                    class="text-xs font-medium text-primary-700 dark:text-primary-400"
+                    class="text-xs font-medium rtl:mr-3 text-primary-700 dark:text-primary-400"
                   >
                     10 minutes ago
                   </div>
@@ -321,7 +321,7 @@
                 </div>
                 <div class="pl-3 w-full">
                   <div
-                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                    class="text-gray-500 font-normal text-sm mb-1.5 rtl:mr-3 dark:text-gray-400"
                   >
                     <span class="font-semibold text-gray-900 dark:text-white"
                       >Joseph Mcfall</span
@@ -333,7 +333,7 @@
                     love your story. See it and view more stories.
                   </div>
                   <div
-                    class="text-xs font-medium text-primary-700 dark:text-primary-400"
+                    class="text-xs font-medium rtl:mr-3 text-primary-700 dark:text-primary-400"
                   >
                     44 minutes ago
                   </div>
@@ -369,7 +369,7 @@
                 </div>
                 <div class="pl-3 w-full">
                   <div
-                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                    class="text-gray-500 font-normal text-sm mb-1.5 rtl:mr-3 dark:text-gray-400"
                   >
                     <span class="font-semibold text-gray-900 dark:text-white"
                       >Leslie Livingston</span
@@ -382,7 +382,7 @@
                     what do you say?
                   </div>
                   <div
-                    class="text-xs font-medium text-primary-700 dark:text-primary-400"
+                    class="text-xs font-medium rtl:mr-3 text-primary-700 dark:text-primary-400"
                   >
                     1 hour ago
                   </div>
@@ -416,7 +416,7 @@
                 </div>
                 <div class="pl-3 w-full">
                   <div
-                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                    class="text-gray-500 font-normal text-sm mb-1.5 rtl:mr-3 dark:text-gray-400"
                   >
                     <span class="font-semibold text-gray-900 dark:text-white"
                       >Robert Brown</span
@@ -425,7 +425,7 @@
                     the new design trend.
                   </div>
                   <div
-                    class="text-xs font-medium text-primary-700 dark:text-primary-400"
+                    class="text-xs font-medium rtl:mr-3 text-primary-700 dark:text-primary-400"
                   >
                     3 hours ago
                   </div>
@@ -439,7 +439,7 @@
               <div class="inline-flex items-center">
                 <svg
                   aria-hidden="true"
-                  class="mr-2 w-5 h-5"
+                  class="mr-2 rtl:ml-2 w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -723,7 +723,7 @@
                   href="#"
                   class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   ><svg
-                    class="mr-2 w-5 h-5 text-gray-400"
+                    class="mr-2 rtl:ml-2 w-5 h-5 text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -742,7 +742,7 @@
                   href="#"
                   class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   ><svg
-                    class="mr-2 w-5 h-5 text-gray-400"
+                    class="mr-2 rtl:ml-2 w-5 h-5 text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -762,7 +762,7 @@
                   <span class="flex items-center">
                     <svg
                       aria-hidden="true"
-                      class="mr-2 w-5 h-5 text-primary-600 dark:text-primary-500"
+                      class="mr-2 rtl:ml-2 w-5 h-5 text-blue-600 dark:text-blue-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -777,7 +777,7 @@
                   </span>
                   <svg
                     aria-hidden="true"
-                    class="w-5 h-5 text-gray-400"
+                    class="w-5 h-5 rtl:rotate-180 text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
