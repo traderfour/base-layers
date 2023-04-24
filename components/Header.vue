@@ -41,7 +41,7 @@
                 class="flex absolute inset-y-0 left-0 rtl:right-2 items-center pl-3 pointer-events-none"
               >
                 <svg
-                  class="w-5 h-5 text-gray-500 dark:text-gray-400  rtl:rotate-90"
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400 rtl:rotate-90"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +65,15 @@
           </form>
         </div>
         <div class="flex items-center lg:order-2">
+          <NuxtLink
+            v-for="(extraLinkItem, extraLinkIndex) in extraLinks"
+            :key="extraLinkIndex"
+            :to="extraLinkItem.link"
+            class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300"
+            active-class="!text-blue-700 dark:!text-blue-500"
+          >
+            {{ extraLinkItem.title }}
+          </NuxtLink>
           <!-- <button
             type="button"
             class="hidden sm:inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-sm text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
@@ -173,7 +182,7 @@
           <button
             type="button"
             data-dropdown-toggle="notification-dropdown"
-            class="p-2 mr-1 text-gray-500 rounded-sm hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="p-2 mx-1 text-gray-500 rounded-sm hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           >
             <span class="sr-only">View notifications</span>
             <!-- Bell icon -->
@@ -668,14 +677,14 @@
           </div>
           <button
             type="button"
-            class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="flex mx-3 text-sm bg-gray-800 rounded-sm md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="dropdown"
           >
             <span class="sr-only">Open user menu</span>
             <img
-              class="w-8 h-8 rounded-full"
+              class="w-8 h-8 rounded-sm"
               src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
               alt="user photo"
             />
@@ -870,4 +879,9 @@ const activeLocale = ref(
 const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
 };
+
+const extraLinks = ref([
+  { title: "Pricing", link: "/pricing" },
+  { title: "Help", link: "/help" },
+]);
 </script>
