@@ -144,7 +144,7 @@
               class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
             >
               <img
-                class="h-5 w-5 rounded-full mt-0.5"
+                class="h-5 w-5 rounded-sm mt-0.5"
                 :src="activeLocale.flagSrc"
                 alt=""
               />
@@ -167,7 +167,7 @@
                   >
                     <div class="inline-flex items-center">
                       <img
-                        class="h-3.5 w-3.5 rounded-full me-2"
+                        class="h-3.5 w-3.5 rounded-sm me-2"
                         :src="localeItem.flagSrc"
                         :alt="localeItem.text"
                       />
