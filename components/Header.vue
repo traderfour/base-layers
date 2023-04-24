@@ -41,7 +41,7 @@
                 class="flex absolute inset-y-0 left-0 rtl:right-2 items-center pl-3 pointer-events-none"
               >
                 <svg
-                  class="w-5 h-5 text-gray-500 dark:text-gray-400  rtl:rotate-90"
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400 rtl:rotate-90"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +54,7 @@
                 </svg>
               </div>
               <input
+                v-model="search"
                 type="text"
                 name="search"
                 id="topbar-search"
@@ -810,11 +811,14 @@
   </header>
 </template>
 <script setup lang="ts">
-import { sidebar } from "../composables/state";
+import { sidebar, search } from "../composables/state";
 const localepath = useLocalePath();
 
 const sideBarItems = sidebar || [];
 const searchInput = ref();
+
+
+
 // color mode
 const colorMode = useColorMode();
 onMounted(() => {
