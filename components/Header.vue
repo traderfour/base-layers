@@ -54,6 +54,7 @@
                 </svg>
               </div>
               <input
+                v-model="search"
                 type="text"
                 name="search"
                 id="topbar-search"
@@ -819,11 +820,14 @@
   </header>
 </template>
 <script setup lang="ts">
-import { sidebar } from "../composables/state";
+import { sidebar, search } from "../composables/state";
 const localepath = useLocalePath();
 
 const sideBarItems = sidebar || [];
 const searchInput = ref();
+
+
+
 // color mode
 const colorMode = useColorMode();
 onMounted(() => {
