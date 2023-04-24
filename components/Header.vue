@@ -17,7 +17,7 @@
             </svg>
           </button> -->
 
-          <NuxtLink :to="localepath('/')" class="flex mr-4 rtl: ml-2">
+          <NuxtLink :to="localepath('/')" class="flex me-4">
             <img
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
               src="../public/img/logo-text.svg"
@@ -880,6 +880,7 @@ const activeLocale = ref(
 
 const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
+  location.reload();
 };
 
 const extraLinks = ref([
