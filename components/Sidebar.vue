@@ -3,7 +3,7 @@
     class="absolute top-24 mx-5 lg:mx-0 lg:top-5 left-0 z-40 w-64 rtl:right-0"
   >
     <div
-      class="overflow-y-auto pt-5 pb-8 px-3 rounded-sm bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+      class="overflow-y-auto pt-5 pb-8 px-3 rounded bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
     >
       <ul class="space-y-2">
         <li
@@ -19,7 +19,7 @@
             active-class="text-blue-700 dark:!text-blue-500"
             v-if="!item.childern?.length"
             :to="{ path: item.route || '/' }"
-            class="flex items-center p-2 text-base font-normal text-gray-900 rounded-sm dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            class="flex items-center p-2 text-base font-normal text-gray-900 rounded dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
           >
             <Icon :name="item.icon" />
 
@@ -36,7 +36,7 @@
           <div v-if="item.childern?.length">
             <button
               type="button"
-              class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-sm transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               :aria-controls="`dropdown-${index}`"
               :data-collapse-toggle="`dropdown-${index}`"
             >
@@ -63,7 +63,7 @@
                 <nuxt-link
                   active-class="text-blue-700"
                   :to="{ path: child.route || '/' }"
-                  class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-sm transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                   >{{ child.name }}</nuxt-link
                 >
               </li>
@@ -74,14 +74,14 @@
     </div>
 
     <div
-      class="hidden rounded-sm -mt-6 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700"
+      class="hidden rounded -mt-6 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700"
     >
       <button
         v-if="colorMode.preference === 'light'"
         id="theme-toggle"
         @click="colorMode.preference = 'dark'"
         type="button"
-        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-sm text-sm p-2.5"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
       >
         <Icon size="1.25rem" name="mdi:weather-night" />
       </button>
@@ -90,7 +90,7 @@
         @click="colorMode.preference = 'light'"
         v-if="colorMode.preference === 'dark'"
         type="button"
-        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-sm text-sm p-2.5"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
       >
         <Icon
           size="1.25rem"
@@ -100,7 +100,7 @@
       </button>
       <a
         href="#"
-        class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+        class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
       >
         <svg
           aria-hidden="true"
@@ -117,7 +117,7 @@
       <a
         href="#"
         data-tooltip-target="tooltip-settings"
-        class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+        class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
       >
         <svg
           aria-hidden="true"
@@ -136,7 +136,7 @@
       <div
         id="tooltip-settings"
         role="tooltip"
-        class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip"
+        class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip"
       >
         Settings page
         <div class="tooltip-arrow" data-popper-arrow></div>
@@ -144,7 +144,7 @@
       <button
         type="button"
         data-dropdown-toggle="language-dropdown"
-        class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+        class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
       >
         <svg
           aria-hidden="true"
@@ -187,7 +187,7 @@
       </button>
       <!-- Dropdown -->
       <div
-        class="hidden z-50 my-4 text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow dark:bg-gray-700"
+        class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
         id="language-dropdown"
       >
         <ul class="py-1" role="none">

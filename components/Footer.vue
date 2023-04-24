@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white dark:bg-gray-800 rounded-sm">
+  <footer class="bg-white dark:bg-gray-800 rounded">
     <div class="p-4 mx-auto lg:-10">
       <div class="grid grid-cols-2 gap-8 lg:grid-cols-6">
         <div class="col-span-2">
@@ -14,7 +14,7 @@
               src="../public/img/logo-text.svg"
             />
             <img
-              class="  md:m-0 mx-auto hidden dark:block"
+              class="md:m-0 mx-auto hidden dark:block"
               width="150"
               height="150"
               src="../public/img/logo-text-dark.svg"
@@ -88,7 +88,7 @@
         </div>
       </div>
       <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
-      <div class="rounded-sm sm:flex sm:items-center sm:justify-between px-2">
+      <div class="rounded sm:flex sm:items-center sm:justify-between px-2">
         <p
           class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
         >
@@ -104,7 +104,7 @@
           <a
             href="#"
             data-tooltip-target="tooltip-facebook"
-            class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
           >
             <svg
               aria-hidden="true"
@@ -123,7 +123,7 @@
           <div
             id="tooltip-facebook"
             role="tooltip"
-            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
           >
             Like us on Facebook
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -131,7 +131,7 @@
           <a
             href="#"
             data-tooltip-target="tooltip-twitter"
-            class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
           >
             <svg
               aria-hidden="true"
@@ -148,7 +148,7 @@
           <div
             id="tooltip-twitter"
             role="tooltip"
-            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
           >
             Follow us on Twitter
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -156,7 +156,7 @@
           <a
             href="#"
             data-tooltip-target="tooltip-github"
-            class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
           >
             <svg
               aria-hidden="true"
@@ -174,7 +174,7 @@
           <div
             id="tooltip-github"
             role="tooltip"
-            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
           >
             Star us on GitHub
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -182,7 +182,7 @@
           <a
             href="#"
             data-tooltip-target="tooltip-dribbble"
-            class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
           >
             <svg
               aria-hidden="true"
@@ -201,7 +201,7 @@
           <div
             id="tooltip-dribbble"
             role="tooltip"
-            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
           >
             Follow us on Dribbble
             <div class="tooltip-arrow" data-popper-arrow></div>

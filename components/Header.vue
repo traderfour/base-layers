@@ -9,7 +9,7 @@
       >
         <div class="flex justify-start items-center">
           <!-- <button id="toggleSidebar" @click="sidebar = !sidebar"
-            class="p-2 text-gray-600 rounded-sm cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
+            class="p-2 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -58,7 +58,7 @@
                 type="text"
                 name="search"
                 id="topbar-search"
-                class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded-sm outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search (Ctrl+K)"
                 ref="searchInput"
               />
@@ -77,7 +77,7 @@
           </NuxtLink>
           <!-- <button
             type="button"
-            class="hidden sm:inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-sm text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+            class="hidden sm:inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
           >
             <svg
               aria-hidden="true"
@@ -95,7 +95,7 @@
             New Widget
           </button> -->
           <!-- <button id="toggleSidebarMobileSearch" type="button"
-            class="p-2 text-gray-500 rounded-sm lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            class="p-2 text-gray-500 rounded lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <span class="sr-only">Search</span>
 
             <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -106,14 +106,14 @@
             </svg>
           </button> -->
           <div
-            class="rounded-sm justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
+            class="rounded justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
           >
             <button
               v-if="colorMode.preference === 'light'"
               id="theme-toggle"
               @click="colorMode.preference = 'dark'"
               type="button"
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-sm text-sm p-2.5"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
             >
               <Icon size="1.25rem" name="mdi:weather-night" />
             </button>
@@ -122,7 +122,7 @@
               @click="colorMode.preference = 'light'"
               v-if="colorMode.preference === 'dark'"
               type="button"
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-sm text-sm p-2.5"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
             >
               <Icon
                 size="1.25rem"
@@ -134,7 +134,7 @@
             <div
               id="tooltip-settings"
               role="tooltip"
-              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip"
             >
               Settings page
               <div class="tooltip-arrow" data-popper-arrow></div>
@@ -142,17 +142,17 @@
             <button
               type="button"
               data-dropdown-toggle="language-dropdown"
-              class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+              class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
             >
               <img
-                class="h-5 w-5 rounded-sm mt-0.5"
+                class="h-5 w-5 rounded mt-0.5"
                 :src="activeLocale.flagSrc"
                 alt=""
               />
             </button>
             <!-- Dropdown -->
             <div
-              class="hidden z-50 my-4 text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow dark:bg-gray-700"
+              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
               id="language-dropdown"
             >
               <ul class="py-1" role="none">
@@ -168,7 +168,7 @@
                   >
                     <div class="inline-flex items-center">
                       <img
-                        class="h-3.5 w-3.5 rounded-sm me-2"
+                        class="h-3.5 w-3.5 rounded me-2"
                         :src="localeItem.flagSrc"
                         :alt="localeItem.text"
                       />
@@ -183,7 +183,7 @@
           <button
             type="button"
             data-dropdown-toggle="notification-dropdown"
-            class="p-2 mx-1 text-gray-500 rounded-sm hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="p-2 mx-1 text-gray-500 rounded hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           >
             <span class="sr-only">View notifications</span>
             <!-- Bell icon -->
@@ -201,7 +201,7 @@
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700"
+            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700"
             id="notification-dropdown"
           >
             <div
@@ -469,7 +469,7 @@
           <button
             type="button"
             data-dropdown-toggle="apps-dropdown"
-            class="p-2 rtl:ml-2 text-gray-500 rounded-sm hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="p-2 rtl:ml-2 text-gray-500 rounded hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           >
             <span class="sr-only">View notifications</span>
             <!-- Icon -->
@@ -486,7 +486,7 @@
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600"
+            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600"
             id="apps-dropdown"
           >
             <div
@@ -497,7 +497,7 @@
             <div class="grid grid-cols-3 gap-4 p-4">
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -516,7 +516,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -533,7 +533,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -552,7 +552,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -571,7 +571,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -592,7 +592,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -614,7 +614,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -636,7 +636,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -655,7 +655,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -678,21 +678,21 @@
           </div>
           <button
             type="button"
-            class="flex mx-3 text-sm bg-gray-800 rounded-sm md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="flex mx-3 text-sm bg-gray-800 rounded md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="dropdown"
           >
             <span class="sr-only">Open user menu</span>
             <img
-              class="w-8 h-8 rounded-sm"
+              class="w-8 h-8 rounded"
               src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
               alt="user photo"
             />
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+            class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
             id="dropdown"
           >
             <div class="py-3 px-4">
@@ -825,8 +825,6 @@ const localepath = useLocalePath();
 
 const sideBarItems = sidebar || [];
 const searchInput = ref();
-
-
 
 // color mode
 const colorMode = useColorMode();

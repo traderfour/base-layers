@@ -3,12 +3,12 @@
   <div
     id="banner"
     tabindex="-1"
-    class="flex justify-between rounded-sm top-0 py-3 px-4 w-full bg-white border border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800"
+    class="flex justify-between rounded top-0 py-3 px-4 w-full bg-white border border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800"
   >
     <div class="flex items-center mx-auto">
       <p class="text-sm font-medium text-gray-900 md:my-0 dark:text-white">
         <span
-          class="hidden md:inline-flex rtl:ml-2 bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800"
+          class="hidden md:inline-flex rtl:ml-2 bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
           >{{ item.badge }}</span
         >
         <!-- We have launched Flowbite Blocks including over 120+ website sections! -->
@@ -51,7 +51,7 @@
     <button
       data-collapse-toggle="banner"
       type="button"
-      class="inline-flex justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-sm text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"
+      class="inline-flex justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"
     >
       <svg
         class="w-5 h-5"
