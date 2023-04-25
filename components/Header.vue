@@ -385,6 +385,7 @@
             </div>
             <button
               type="button"
+              id="language-dropdown-toggle"
               data-dropdown-toggle="language-dropdown"
               class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
             >
@@ -1151,6 +1152,7 @@
 </template>
 <script setup lang="ts">
 import { sidebar, search } from "../composables/state";
+import { Dropdown } from "flowbite";
 const localepath = useLocalePath();
 
 const sideBarItems = sidebar || [];
@@ -1215,10 +1217,18 @@ const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
   localeDropDownKey.value++;
 
- const dropdown = document.getElementById('language-dropdown')
- //display none for dropdown
-  dropdown?.classList.remove('block')
-  dropdown?.classList.add('hidden')
+  /*
+   * $targetEl: required
+   * $triggerEl: required
+   * options: optional
+   */
+  // set the dropdown menu element
+  const $targetEl = document.getElementById("language-dropdown");
+  // set the element that trigger the dropdown menu on click
+  const $triggerEl = document.getElementById("language-dropdown-toggle");
+  const dropdown = new Dropdown($targetEl, $triggerEl);
+  // hide the dropdown menu
+  dropdown.hide();
 
 };
 
