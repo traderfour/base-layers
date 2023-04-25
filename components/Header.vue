@@ -1214,6 +1214,12 @@ const localeDropDownKey = ref(0);
 const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
   localeDropDownKey.value++;
+
+ const dropdown = document.getElementById('language-dropdown')
+ //display none for dropdown
+  dropdown?.classList.remove('block')
+  dropdown?.classList.add('hidden')
+
 };
 
 // Links beside dark mode button
