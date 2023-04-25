@@ -1066,49 +1066,20 @@
     >
       <div class="py-3 px-4 mx-auto">
         <div class="flex items-center">
-          <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
-            <li>
-              <a
-                href="#"
-                class="text-gray-900 dark:text-white hover:underline"
+          <ul class="flex flex-row mt-0 mr-6 text-sm font-medium">
+            <li
+              v-for="(subNavItem, subNavIndex) in subNavLinks"
+              :key="subNavIndex"
+              class="me-8"
+            >
+              <NuxtLink
+                :to="localepath(subNavItem.link)"
+                class="hover:text-blue-700 text-gray-600 dark:text-gray-300"
                 aria-current="page"
-                >Home</a
+                active-class="!text-blue-700 dark:!text-blue-500"
               >
-            </li>
-            <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Company</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Team</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Features</a
-              >
-            </li>
-            <li class="hidden md:inline">
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Marketplace</a
-              >
-            </li>
-            <li class="hidden md:inline">
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Resources</a
-              >
-            </li>
-            <li class="hidden md:inline">
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Forum</a
-              >
-            </li>
-            <li class="hidden md:inline">
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Support</a
-              >
+                {{ subNavItem.title }}
+              </NuxtLink>
             </li>
           </ul>
           <button
@@ -1209,6 +1180,7 @@ onMounted(() => {
 // i18n
 const switchLocalePath = useSwitchLocalePath();
 
+// Locale List
 const localeItems = ref([
   {
     lang: "en",
@@ -1237,13 +1209,24 @@ const activeLocale = ref(
     localeItems.value[0]
 );
 
+// Active local Handler
+const localeDropDownKey = ref(0);
 const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
-  location.reload();
+  localeDropDownKey.value++;
 };
 
+// Links beside dark mode button
 const extraLinks = ref([
   { title: "Pricing", link: "/pricing" },
   { title: "Help", link: "/help" },
+]);
+
+// Sub Nav Links
+const subNavLinks = ref([
+  { title: "Home", link: "/" },
+  { title: "Transactions", link: "/my/finance/transactions" },
+  { title: "Finance", link: "/my/finance" },
+  { title: "Discounts", link: "/my/finance/discounts" },
 ]);
 </script>
