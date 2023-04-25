@@ -392,7 +392,7 @@
               <img
                 class="h-5 w-5 rounded mt-0.5"
                 :src="activeLocale.flagSrc"
-                alt=""
+                :alt="activeLocale.text"
               />
             </button>
             <!-- Dropdown -->
