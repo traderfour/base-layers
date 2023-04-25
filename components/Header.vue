@@ -1,15 +1,13 @@
 <template>
   <header class="sticky z-20 top-0">
     <Announcement />
-    <nav
-      class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800 shadow-md"
-    >
+    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800">
       <div
         class="flex flex-wrap md:justify-between justify-center items-center"
       >
         <div class="flex justify-start items-center">
           <!-- <button id="toggleSidebar" @click="sidebar = !sidebar"
-            class="p-2 text-gray-600 rounded-sm cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
+            class="p-2 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -17,7 +15,7 @@
             </svg>
           </button> -->
 
-          <NuxtLink :to="localepath('/')" class="flex mr-4 rtl: ml-2">
+          <NuxtLink :to="localepath('/')" class="flex me-4">
             <img
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
               src="../public/img/logo-text.svg"
@@ -58,7 +56,7 @@
                 type="text"
                 name="search"
                 id="topbar-search"
-                class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded-sm outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search (Ctrl+K)"
                 ref="searchInput"
               />
@@ -75,9 +73,255 @@
           >
             {{ extraLinkItem.title }}
           </NuxtLink>
+          <button
+            id="mega-menu-button"
+            data-dropdown-toggle="mega-menu"
+            class="lg:flex hidden justify-between items-center py-2 pr-4 pl-3 w-full lg:w-auto mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300 lg:p-0"
+          >
+            Company
+            <svg
+              class="ml-1 w-5 h-5 lg:w-4 lg:h-4"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="mega-menu"
+            class="grid hidden absolute z-10 w-full bg-white border border-gray-100 shadow-md dark:border-gray-700 lg:rounded-lg lg:w-auto lg:grid-cols-3 dark:bg-gray-700"
+          >
+            <div
+              class="p-2 text-gray-900 bg-white lg:rounded-lg dark:text-white lg:col-span-2 dark:bg-gray-800"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    <div
+                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Explore Design Work</div>
+                      <div
+                        class="text-sm font-light text-gray-500 dark:text-gray-400"
+                      >
+                        Trending designs to inspire you
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    <div
+                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">New & Noteworthy</div>
+                      <div
+                        class="text-sm font-light text-gray-500 dark:text-gray-400"
+                      >
+                        Up-and-coming designers
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    <div
+                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"
+                        ></path>
+                        <path
+                          d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Playoffs</div>
+                      <div
+                        class="text-sm font-light text-gray-500 dark:text-gray-400"
+                      >
+                        Work designers are riffing on
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    <div
+                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"
+                        ></path>
+                        <path
+                          d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Blog</div>
+                      <div
+                        class="text-sm font-light text-gray-500 dark:text-gray-400"
+                      >
+                        Interviews, tutorials, and more
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    <div
+                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Weekly Warm-up</div>
+                      <div
+                        class="text-sm font-light text-gray-500 dark:text-gray-400"
+                      >
+                        Prompt to flex your skills
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="py-5 px-5 bg-gray-50 lg:rounded-lg lg:col-span-1 dark:bg-gray-700"
+            >
+              <h3
+                class="mb-4 text-sm font-semibold text-gray-900 dark:text-white"
+              >
+                Browse categories
+              </h3>
+              <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Animation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Branding</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Illustration</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Mobile</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Print</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Product Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-primary-600 dark:hover:text-primary-500"
+                    >Web Design</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <!-- <button
             type="button"
-            class="hidden sm:inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-sm text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+            class="hidden sm:inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
           >
             <svg
               aria-hidden="true"
@@ -95,7 +339,7 @@
             New Widget
           </button> -->
           <!-- <button id="toggleSidebarMobileSearch" type="button"
-            class="p-2 text-gray-500 rounded-sm lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            class="p-2 text-gray-500 rounded lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <span class="sr-only">Search</span>
 
             <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -106,23 +350,23 @@
             </svg>
           </button> -->
           <div
-            class="rounded-sm justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
+            class="rounded justify-center flex dark:bg-gray-800 z-20 border-gray-200 dark:border-gray-700"
           >
             <button
-              v-if="colorMode.preference === 'light'"
+             v-show="colorMode.preference === 'light'"
               id="theme-toggle"
               @click="colorMode.preference = 'dark'"
               type="button"
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-sm text-sm p-2.5"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
             >
               <Icon size="1.25rem" name="mdi:weather-night" />
             </button>
             <button
               id="theme-toggle"
               @click="colorMode.preference = 'light'"
-              v-if="colorMode.preference === 'dark'"
+             v-show="colorMode.preference === 'dark'"
               type="button"
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-sm text-sm p-2.5"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5"
             >
               <Icon
                 size="1.25rem"
@@ -134,25 +378,26 @@
             <div
               id="tooltip-settings"
               role="tooltip"
-              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-sm shadow-sm opacity-0 transition-opacity duration-300 tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded shadow-sm opacity-0 transition-opacity duration-300 tooltip"
             >
               Settings page
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
             <button
               type="button"
+              id="language-dropdown-toggle"
               data-dropdown-toggle="language-dropdown"
-              class="inline-flex justify-center p-2 text-gray-500 rounded-sm cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+              class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
             >
               <img
-                class="h-5 w-5 rounded-full mt-0.5"
+                class="h-5 w-5 rounded mt-0.5"
                 :src="activeLocale.flagSrc"
-                alt=""
+                :alt="activeLocale.text"
               />
             </button>
             <!-- Dropdown -->
             <div
-              class="hidden z-50 my-4 text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow dark:bg-gray-700"
+              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
               id="language-dropdown"
             >
               <ul class="py-1" role="none">
@@ -168,7 +413,7 @@
                   >
                     <div class="inline-flex items-center">
                       <img
-                        class="h-3.5 w-3.5 rounded-full me-2"
+                        class="h-3.5 w-3.5 rounded me-2"
                         :src="localeItem.flagSrc"
                         :alt="localeItem.text"
                       />
@@ -183,7 +428,7 @@
           <button
             type="button"
             data-dropdown-toggle="notification-dropdown"
-            class="p-2 mx-1 text-gray-500 rounded-sm hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="p-2 mx-1 text-gray-500 rounded hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           >
             <span class="sr-only">View notifications</span>
             <!-- Bell icon -->
@@ -201,7 +446,7 @@
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700"
+            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700"
             id="notification-dropdown"
           >
             <div
@@ -469,7 +714,7 @@
           <button
             type="button"
             data-dropdown-toggle="apps-dropdown"
-            class="p-2 rtl:ml-2 text-gray-500 rounded-sm hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="p-2 rtl:ml-2 text-gray-500 rounded hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           >
             <span class="sr-only">View notifications</span>
             <!-- Icon -->
@@ -486,7 +731,7 @@
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600"
+            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600"
             id="apps-dropdown"
           >
             <div
@@ -497,7 +742,7 @@
             <div class="grid grid-cols-3 gap-4 p-4">
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -516,7 +761,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -533,7 +778,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -552,7 +797,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -571,7 +816,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -592,7 +837,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -614,7 +859,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -636,7 +881,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -655,7 +900,7 @@
               </a>
               <a
                 href="#"
-                class="block p-4 text-center rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                class="block p-4 text-center rounded hover:bg-gray-100 dark:hover:bg-gray-600 group"
               >
                 <svg
                   aria-hidden="true"
@@ -678,21 +923,21 @@
           </div>
           <button
             type="button"
-            class="flex mx-3 text-sm bg-gray-800 rounded-sm md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            class="flex mx-3 text-sm bg-gray-800 rounded md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="dropdown"
           >
             <span class="sr-only">Open user menu</span>
             <img
-              class="w-8 h-8 rounded-sm"
+              class="w-8 h-8 rounded"
               src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
               alt="user photo"
             />
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded-sm divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+            class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
             id="dropdown"
           >
             <div class="py-3 px-4">
@@ -817,16 +1062,101 @@
         </div>
       </div>
     </nav>
+    <nav
+      class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800 shadow-md lg:block hidden"
+    >
+      <div class="py-3 px-4 mx-auto">
+        <div class="flex items-center">
+          <ul class="flex flex-row mt-0 mr-6 text-sm font-medium">
+            <li
+              v-for="(subNavItem, subNavIndex) in subNavLinks"
+              :key="subNavIndex"
+              class="me-8"
+            >
+              <NuxtLink
+                :to="localepath(subNavItem.link)"
+                class="hover:text-blue-700 text-gray-600 dark:text-gray-300"
+                aria-current="page"
+                active-class="!text-blue-700 dark:!text-blue-500"
+              >
+                {{ subNavItem.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+          <button
+            id="dropdownDefault"
+            data-dropdown-toggle="dropdown"
+            data-dropdown-placement="bottom"
+            class="text-gray-500 md:hidden dark:hover:bg-gray-600 dark:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-1.5"
+          >
+            <svg
+              class="w-5 h-5 text-gray-700 dark:text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="dropdown"
+            class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+          >
+            <ul
+              class="py-1 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDefault"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Marketplace</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Forum</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
 </template>
 <script setup lang="ts">
 import { sidebar, search } from "../composables/state";
+import { Dropdown } from "flowbite";
 const localepath = useLocalePath();
 
 const sideBarItems = sidebar || [];
 const searchInput = ref();
-
-
 
 // color mode
 const colorMode = useColorMode();
@@ -852,6 +1182,7 @@ onMounted(() => {
 // i18n
 const switchLocalePath = useSwitchLocalePath();
 
+// Locale List
 const localeItems = ref([
   {
     lang: "en",
@@ -880,12 +1211,38 @@ const activeLocale = ref(
     localeItems.value[0]
 );
 
+// Active local Handler
+const localeDropDownKey = ref(0);
 const switchActiveLocale = (index: number) => {
   activeLocale.value = localeItems.value[index];
+  localeDropDownKey.value++;
+
+  /*
+   * $targetEl: required
+   * $triggerEl: required
+   * options: optional
+   */
+  // set the dropdown menu element
+  const $targetEl = document.getElementById("language-dropdown");
+  // set the element that trigger the dropdown menu on click
+  const $triggerEl = document.getElementById("language-dropdown-toggle");
+  const dropdown = new Dropdown($targetEl, $triggerEl);
+  // hide the dropdown menu
+  dropdown.hide();
+
 };
 
+// Links beside dark mode button
 const extraLinks = ref([
   { title: "Pricing", link: "/pricing" },
   { title: "Help", link: "/help" },
+]);
+
+// Sub Nav Links
+const subNavLinks = ref([
+  { title: "Home", link: "/" },
+  { title: "Transactions", link: "/my/finance/transactions" },
+  { title: "Finance", link: "/my/finance" },
+  { title: "Discounts", link: "/my/finance/discounts" },
 ]);
 </script>
