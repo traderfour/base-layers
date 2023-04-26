@@ -15,11 +15,11 @@
     />
     <div
       v-else
-      class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded dark:bg-gray-600"
+      class="relative w-8 h-8 overflow-hidden bg-gray-100 rounded dark:bg-gray-600"
     >
       <Icon
         name="mdi:account"
-        class="absolute w-12 h-12 text-gray-400 -left-1 rounded"
+        class="absolute w-10 h-10 text-gray-400 -left-1"
       />
     </div>
   </button>

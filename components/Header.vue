@@ -108,13 +108,17 @@
           <LocaleTheme />
 
           <template v-if="userData">
+            <!-- Notification -->
             <NotificationsDropDown />
 
+            <!-- Applications -->
             <ApplicationsDropDown />
 
+            <!-- User Menu -->
             <UserInfoDropDown />
           </template>
 
+          <!-- Login Button -->
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
