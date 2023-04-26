@@ -19,7 +19,7 @@
     >
       <Icon
         name="mdi:account"
-        class="absolute w-12 h-12 text-gray-400 -left-1"
+        class="absolute w-12 h-12 text-gray-400 -left-1 rounded"
       />
     </div>
   </button>
