@@ -23,7 +23,8 @@
     </Head>
 
     <Body class="dark:bg-gray-700 bg-gray-50">
-      <Header></Header>
+      <!-- <Header></Header> -->
+      <new-header></new-header>
       <main>
         <div>
           <!-- <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
