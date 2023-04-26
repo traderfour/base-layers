@@ -18,12 +18,12 @@
           <NuxtLink :to="localepath('/')" class="flex me-4">
             <img
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
-              src="../public/img/logo-text.svg"
+              src="../public/img/h-logo.svg"
               alt="Trader4 logo"
             />
             <img
               class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
-              src="../public/img/logo-text-dark.svg"
+              src="../public/img/h-logo-dark.svg"
               alt="Trader4 logo"
             />
             <!-- <span
