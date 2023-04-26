@@ -18,12 +18,12 @@
           <NuxtLink :to="localepath('/')" class="flex me-4">
             <img
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
-              src="../public/img/logo-text.svg"
+              src="../public/img/h-logo.svg"
               alt="Trader4 logo"
             />
             <img
               class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
-              src="../public/img/logo-text-dark.svg"
+              src="../public/img/h-logo-dark.svg"
               alt="Trader4 logo"
             />
             <!-- <span
@@ -78,9 +78,22 @@
             data-dropdown-toggle="mega-menu"
             class="lg:flex hidden justify-between items-center py-2 pr-4 pl-3 w-full lg:w-auto mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300 lg:p-0"
           >
+          <svg
+              class=" hidden rtl:block me-1 w-5 h-5 lg:w-4 lg:h-4"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          
             Company
             <svg
-              class="ml-1 w-5 h-5 lg:w-4 lg:h-4"
+              class=" hidden ltr:block ms-1 w-5 h-5 lg:w-4 lg:h-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +119,7 @@
                     class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div
-                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                      class="p-2 me-4  bg-white rounded-lg shadow dark:bg-gray-700"
                     >
                       <svg
                         class="w-5 h-5"
@@ -135,7 +148,7 @@
                     class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div
-                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                      class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700"
                     >
                       <svg
                         class="w-5 h-5"
@@ -166,7 +179,7 @@
                     class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div
-                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                      class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700"
                     >
                       <svg
                         class="w-5 h-5"
@@ -198,7 +211,7 @@
                     class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div
-                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                      class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700"
                     >
                       <svg
                         class="w-5 h-5"
@@ -230,7 +243,7 @@
                     class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div
-                      class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700"
+                      class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700"
                     >
                       <svg
                         class="w-5 h-5"
