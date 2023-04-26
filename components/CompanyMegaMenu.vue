@@ -6,7 +6,7 @@
   >
     Company
     <svg
-      class="ml-1 w-5 h-5 lg:w-4 lg:h-4"
+      class="ms-1 w-5 h-5 lg:w-4 lg:h-4"
       fill="currentColor"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@
             href="#"
             class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
           >
-            <div class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -56,7 +56,7 @@
             href="#"
             class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
           >
-            <div class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -83,7 +83,7 @@
             href="#"
             class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
           >
-            <div class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -111,7 +111,7 @@
             href="#"
             class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
           >
-            <div class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -139,7 +139,7 @@
             href="#"
             class="flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
           >
-            <div class="p-2 mr-4 bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="p-2 me-4 bg-white rounded-lg shadow dark:bg-gray-700">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
