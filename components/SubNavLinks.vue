@@ -92,9 +92,8 @@ const localepath = useLocalePath();
 
 // Sub Nav Links
 const subNavLinks = ref([
-  { title: "Home", link: "/" },
-  { title: "Transactions", link: "/my/finance/transactions" },
   { title: "Finance", link: "/my/finance" },
-  { title: "Discounts", link: "/my/finance/discounts" },
+  { title: "Products", link: "/my/products" },
+  { title: "Trading Accounts", link: "/my/finance/transactions" },
 ]);
 </script>

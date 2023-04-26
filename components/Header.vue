@@ -124,7 +124,7 @@
         </div>
       </div>
     </nav>
-    <SubNavLinks />
+    <SubNavLinks v-if="userData" />
   </header>
 </template>
 <script setup lang="ts">
