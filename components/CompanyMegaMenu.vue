@@ -2,6 +2,7 @@
   <button
     id="mega-menu-button"
     data-dropdown-toggle="mega-menu"
+    data-dropdown-trigger="hover"
     class="lg:flex hidden justify-between items-center py-2 pr-4 pl-3 w-full lg:w-auto mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300 lg:p-0"
   >
     Company
