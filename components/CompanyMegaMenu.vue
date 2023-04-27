@@ -2,7 +2,7 @@
   <button
     id="mega-menu-button"
     data-dropdown-toggle="mega-menu"
-    class="md:flex hidden items-center pr-4 pl-3 w-full lg:w-auto mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300 lg:p-0">
+    class="md:flex hidden items-center pr-4 pl-3 lg:w-auto mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300 lg:p-0">
     Company
     <svg
       class="ms-1 w-5 h-5 lg:w-4 lg:h-4"
