@@ -76,6 +76,7 @@
         class="block py-2 relative pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">
         <!-- <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a> -->
         <NuxtLink
+          v-if="!extraLinkItem.subMenu"
           :key="extraLinkIndex"
           :to="localepath(extraLinkItem.link as string)"
           class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300"
@@ -89,16 +90,18 @@
             id="accordion-color"
             data-accordion="collapse"
             data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
-            <h2 id="accordion-color-heading-2">
-              <button
-                type="button"
-                class="flex items-center justify-between w-full p-0 font-medium text-left text-gray-500 border-b-0 border-gray-200 focus:ring-blue-200 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+            <h2 id="accordion-color-heading-2 flex">
+              <NuxtLink
+                :key="extraLinkIndex"
                 data-accordion-target="#accordion-color-body-2"
                 aria-expanded="false"
-                aria-controls="accordion-color-body-2">
+                aria-controls="accordion-color-body-2"
+                class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300 cursor-pointer"
+                active-class="!text-blue-700 dark:!text-blue-500">
+                {{ extraLinkItem.title }}
                 <svg
                   data-accordion-icon
-                  class="w-6 h-6 shrink-0 absolute top-2.5 start-24"
+                  class="w-6 h-6 shrink-0 inline"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +110,7 @@
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"></path>
                 </svg>
-              </button>
+              </NuxtLink>
             </h2>
             <div
               id="accordion-color-body-2"
@@ -161,10 +164,13 @@
               id="accordion-color"
               data-accordion="collapse"
               data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
-              <h2 id="accordion-color-heading-2">
+              <h2
+                id="accordion-color-heading-2"
+                class="hover:text-blue-700 text-gray-600 dark:!text-gray-300">
+                {{ extraLinkItem.title }}
                 <button
                   type="button"
-                  class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                  class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:focus:!text-gray-100 hover:bg-blue-100 dark:hover:bg-gray-800"
                   data-accordion-target="#accordion-color-body-2"
                   aria-expanded="false"
                   aria-controls="accordion-color-body-2">
@@ -210,10 +216,38 @@
 </template>
 
 <script setup lang="ts">
-
 const searchInput = ref();
 const userData = ref<User>();
 const localepath = useLocalePath();
+
+// Sub Nav Links
+const subNavLinks = ref<Menu[]>([
+  { title: "Finance", link: "/my/finance" },
+  { title: "Products", link: "/my/products" },
+  { title: "Trading Accounts", link: "/my/finance/transactions" },
+]);
+
+// Links beside dark mode button
+const extraLinks = ref<Menu[]>([
+  { title: "Pricing", link: "/pricing" },
+  { title: "Help", link: "/help" },
+  {
+    title: "company",
+    link: "#",
+    subMenu: [
+      { title: "Animation", link: "/" },
+      { title: "Branding", link: "/" },
+      { title: "Branding", link: "/" },
+      { title: "Illustration", link: "/" },
+      { title: "Mobile", link: "/" },
+      { title: "Print", link: "/" },
+      { title: "Product Design", link: "/" },
+      { title: "Web Design", link: "/" },
+    ],
+  },
+]);
+
+const mobileLinks = ref([...extraLinks.value]);
 
 // color mode
 onBeforeMount(() => {
@@ -231,39 +265,8 @@ onBeforeMount(() => {
       event.preventDefault();
     }
   });
+  if (userData.value) {
+    mobileLinks.value = [...subNavLinks.value];
+  }
 });
-// Sub Nav Links
-const subNavLinks = ref<Menu[]>([
-  { title: "Finance", link: "/my/finance" },
-  { title: "Products", link: "/my/products" },
-  { title: "Trading Accounts", link: "/my/finance/transactions" },
-]);
-
-// Links beside dark mode button
-const extraLinks = ref<Menu[]>([
-  { title: "Pricing", link: "/pricing" },
-  { title: "Help", link: "/help" },
-  {
-    title: "company",
-    link: "/company",
-    subMenu: [
-      { title: "Animation", link: "/" },
-      { title: "Branding", link: "/" },
-      { title: "Branding", link: "/" },
-      { title: "Illustration", link: "/" },
-      { title: "Mobile", link: "/" },
-      { title: "Print", link: "/" },
-      { title: "Product Design", link: "/" },
-      { title: "Web Design", link: "/" },
-    ],
-  },
-]);
-const mobileLinks = [...extraLinks.value, ...subNavLinks.value] as Menu[];
-
-// const mobileLinks =
-// if (userData) {
-//
-// } else {
-//     extraLinks.value
-// }
 </script>

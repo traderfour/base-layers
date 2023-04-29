@@ -116,8 +116,7 @@
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
-            class="px-4 py-1 rounded border border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
-          >
+            class="px-4 py-1 rounded border border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
             <Icon name="mdi:account-circle-outline" size="23px" class="me-2" />
             Login
           </NuxtLink>
@@ -131,7 +130,7 @@
   </header>
 </template>
 <script setup lang="ts">
-import {  search } from "../composables/state";
+import { search } from "../composables/state";
 
 const localepath = useLocalePath();
 const userData = ref<User>();
