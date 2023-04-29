@@ -10,20 +10,19 @@
         :name="meta.name"
         :content="meta.content"
         v-for="(meta, index) in metaList"
-        :key="index"
-      />
+        :key="index" />
       <template v-for="link in head.link" :key="link.id">
         <Link
           :id="link.id"
           :rel="link.rel"
           :href="link.href"
-          :hreflang="link.hreflang"
-        />
+          :hreflang="link.hreflang" />
       </template>
     </Head>
 
     <Body class="dark:bg-gray-700 bg-gray-50">
       <Header></Header>
+
       <main>
         <div>
           <!-- <div class="md:basis-1/6 absolute lg:static" v-show="sidebar">
