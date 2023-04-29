@@ -72,11 +72,12 @@
       class="flex md:hidden flex-col p-4 md:p-0 mt-4 font-medium border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li
         v-for="(extraLinkItem, extraLinkIndex) in mobileLinks"
+        :key="extraLinkIndex"
         class="block py-2 relative pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">
         <!-- <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a> -->
         <NuxtLink
           :key="extraLinkIndex"
-          :to="localepath(extraLinkItem.link)"
+          :to="localepath(extraLinkItem.link as string)"
           class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300"
           active-class="!text-blue-700 dark:!text-blue-500">
           {{ extraLinkItem.title }}
@@ -118,7 +119,7 @@
                   v-for="item in extraLinkItem.subMenu">
                   <NuxtLink
                     :key="extraLinkIndex"
-                    :to="localepath(item.link)"
+                    :to="localepath(item.link as string)"
                     class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300"
                     active-class="!text-blue-700 dark:!text-blue-500">
                     {{ item.title }}
@@ -148,7 +149,7 @@
 
           <NuxtLink
             :key="extraLinkIndex"
-            :to="localepath(extraLinkItem.link)"
+            :to="localepath(extraLinkItem.link as string)"
             class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300"
             active-class="!text-blue-700 dark:!text-blue-500">
             {{ extraLinkItem.title }}
@@ -192,7 +193,7 @@
                     v-for="item in extraLinkItem.subMenu">
                     <NuxtLink
                       :key="extraLinkIndex"
-                      :to="localepath(item.link)"
+                      :to="localepath(item.link as string)"
                       class="mx-2 hover:text-blue-700 text-gray-600 dark:text-gray-300"
                       active-class="!text-blue-700 dark:!text-blue-500">
                       {{ item.title }}
@@ -209,6 +210,7 @@
 </template>
 
 <script setup lang="ts">
+
 const searchInput = ref();
 const userData = ref<User>();
 const localepath = useLocalePath();
@@ -231,14 +233,14 @@ onBeforeMount(() => {
   });
 });
 // Sub Nav Links
-const subNavLinks = ref<menu[]>([
+const subNavLinks = ref<Menu[]>([
   { title: "Finance", link: "/my/finance" },
   { title: "Products", link: "/my/products" },
   { title: "Trading Accounts", link: "/my/finance/transactions" },
 ]);
 
 // Links beside dark mode button
-const extraLinks = ref<menu[]>([
+const extraLinks = ref<Menu[]>([
   { title: "Pricing", link: "/pricing" },
   { title: "Help", link: "/help" },
   {
@@ -256,7 +258,7 @@ const extraLinks = ref<menu[]>([
     ],
   },
 ]);
-const mobileLinks = [...extraLinks.value, ...subNavLinks.value];
+const mobileLinks = [...extraLinks.value, ...subNavLinks.value] as Menu[];
 
 // const mobileLinks =
 // if (userData) {
