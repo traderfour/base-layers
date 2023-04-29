@@ -61,7 +61,7 @@
           <NuxtLink
             v-for="(extraLinkItem, extraLinkIndex) in extraLinks"
             :key="extraLinkIndex"
-            :to="localepath(extraLinkItem.link)"
+            :to="localepath(extraLinkItem.link as string)"
             class="mx-2 hover:text-blue-700 text-gray-600 hidden md:block dark:text-gray-300"
             active-class="!text-blue-700 dark:!text-blue-500">
             {{ extraLinkItem.title }}
@@ -116,10 +116,14 @@
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
-            class="px-4 py-1 rounded bg-blue-600 hover:bg-blue-800 text-white dark:bg-blue-500 dark:hover:bg-blue-600 dark:text-gray-200 ms-3"
-            >Login</NuxtLink
+            class="px-4 py-1 rounded border border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
           >
+            <Icon name="mdi:account-circle-outline" size="23px" class="me-2" />
+            Login
+          </NuxtLink>
         </div>
+
+        <!-- MobileHeader Component  -->
         <MobileHeader />
       </div>
     </nav>
@@ -127,12 +131,10 @@
   </header>
 </template>
 <script setup lang="ts">
-import { sidebar, search } from "../composables/state";
-import MobileHeader from "./mobileHeader.vue";
+import {  search } from "../composables/state";
 
 const localepath = useLocalePath();
 const userData = ref<User>();
-const sideBarItems = sidebar || [];
 const searchInput = ref();
 
 // color mode
@@ -154,7 +156,7 @@ onBeforeMount(() => {
 });
 
 // Links beside dark mode button
-const extraLinks = ref<menu[]>([
+const extraLinks = ref<Menu[]>([
   { title: "Pricing", link: "/pricing" },
   { title: "Help", link: "/help" },
 ]);

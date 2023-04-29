@@ -12,7 +12,6 @@ const route = useRoute();
 watch(
   () => route.path,
   () => {
-    console.log("route changed");
     initFlowbite();
   }
 );

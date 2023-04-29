@@ -1,4 +1,4 @@
-interface menu {
+interface Menu {
   title: string;
   link?: string;
   subMenu?: ISubmenu[];
