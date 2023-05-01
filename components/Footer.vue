@@ -85,9 +85,11 @@
           </form>
         </div>
         <hr
-          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+          class="lg:my-8 my-6 border-gray-200 sm:mx-auto dark:border-gray-700"
         />
-        <div class="grid grid-cols-3 md:space-y-0 space-y-5 justify-between">
+        <div
+          class="my-4 grid grid-cols-3 md:space-y-0 space-y-5 justify-between"
+        >
           <div class="md:col-span-1 col-span-full">
             <span
               class="block md:text-start text-sm text-gray-500 dark:text-gray-400"
