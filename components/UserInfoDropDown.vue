@@ -156,13 +156,11 @@
 
 <script setup lang="ts">
 const userData = ref<User>();
-onMounted(() => {
-  userData.value = JSON.parse(localStorage.getItem("user") as string) as User;
-});
+userData.value = useCookie("user").value as any;
 
 const signoutUser = () => {
-  localStorage.removeItem("user");
-  localStorage.removeItem("token");
+  // localStorage.removeItem("user");
+  useCookie("user").value = undefined;
   location.replace("/");
 };
 </script>
