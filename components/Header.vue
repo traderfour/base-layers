@@ -109,7 +109,7 @@
 </template>
 <script setup lang="ts">
 import { search } from "../composables/state";
-const { logo } = useRuntimeConfig().config;
+const logo = useRuntimeConfig().config?.logo || "";
 
 const localepath = useLocalePath();
 const userData = ref<User | unknown>();

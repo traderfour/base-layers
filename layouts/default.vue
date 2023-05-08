@@ -45,7 +45,7 @@
   </Html>
 </template>
 <script lang="ts" setup>
-const { name } = useRuntimeConfig().config;
+const name = useRuntimeConfig().config?.name || 'Not Found';
 
 //route
 const route = useRoute();
