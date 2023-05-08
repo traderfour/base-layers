@@ -10,17 +10,20 @@
         :name="meta.name"
         :content="meta.content"
         v-for="(meta, index) in metaList"
-        :key="index" />
+        :key="index"
+      />
       <template v-for="link in head.link" :key="link.id">
         <Link
           :id="link.id"
           :rel="link.rel"
           :href="link.href"
-          :hreflang="link.hreflang" />
+          :hreflang="link.hreflang"
+        />
       </template>
     </Head>
 
     <Body class="dark:bg-gray-700 bg-gray-50">
+      {{ name }}
       <Header></Header>
 
       <main>
@@ -42,8 +45,7 @@
   </Html>
 </template>
 <script lang="ts" setup>
-import sidebar from "../core/sidebar";
-import { PropType } from "vue";
+const { name } = useRuntimeConfig().config;
 
 //route
 const route = useRoute();

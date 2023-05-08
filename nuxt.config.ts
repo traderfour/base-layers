@@ -17,6 +17,12 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    config:{
+      name:'Base',
+      logo:'/img/h-logo.svg'
+    }
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
