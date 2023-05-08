@@ -5,5 +5,12 @@ const useBootstrap = () => {
   onMounted(() => {
     initFlowbite();
   });
+  const route = useRoute();
+  watch(
+    () => route.path,
+    () => {
+      initFlowbite();
+    }
+  );
 };
 export default useBootstrap;

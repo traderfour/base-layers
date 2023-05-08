@@ -45,11 +45,13 @@
   </Html>
 </template>
 <script lang="ts" setup>
+import useBootstrap from '~/core/useBootstrap';
+
 const name = useRuntimeConfig().config?.name || 'Not Found';
 
 //route
 const route = useRoute();
-
+useBootstrap()
 //i18n
 const { locale, t } = useI18n();
 const head = useLocaleHead({
