@@ -1,6 +1,8 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "trader4-base-app",
+  "version": "1.0.1",
+  "type": "module",
+  "main": "./nuxt.config.ts",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
