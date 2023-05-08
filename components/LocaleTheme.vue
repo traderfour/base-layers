@@ -74,7 +74,6 @@
 </template>
 
 <script setup lang="ts">
-import { Dropdown } from "flowbite";
 
 // i18n
 const switchLocalePath = useSwitchLocalePath();
@@ -124,9 +123,9 @@ const switchActiveLocale = (index: number) => {
   const $targetEl = document.getElementById("language-dropdown");
   // set the element that trigger the dropdown menu on click
   const $triggerEl = document.getElementById("language-dropdown-toggle");
-  const dropdown = new Dropdown($targetEl, $triggerEl);
+  // const dropdown = new Dropdown($targetEl, $triggerEl);
   // hide the dropdown menu
-  dropdown.hide();
+  // dropdown.hide();
 };
 
 onMounted(() => {
