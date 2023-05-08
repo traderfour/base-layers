@@ -1,9 +1,10 @@
 <template>
-  <header class="sticky z-20 top-0">
+  <header id="main-header" class="sticky z-20 top-0">
     <Announcement />
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800">
       <div
-        class="flex flex-wrap md:justify-between justify-center items-center">
+        class="flex flex-wrap md:justify-between justify-center items-center"
+      >
         <div class="flex justify-start items-center">
           <!-- <button id="toggleSidebar" @click="sidebar = !sidebar"
             class="p-2 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
@@ -18,11 +19,13 @@
             <img
               class="md:h-20 md:w-20 h-16 w-16 dark:hidden"
               src="../public/img/h-logo.svg"
-              alt="Trader4 logo" />
+              alt="Trader4 logo"
+            />
             <img
               class="md:h-20 md:w-20 h-16 w-16 hidden dark:block"
               src="../public/img/h-logo-dark.svg"
-              alt="Trader4 logo" />
+              alt="Trader4 logo"
+            />
             <!-- <span
               class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
             >
@@ -33,16 +36,19 @@
             <label for="topbar-search" class="sr-only">Search</label>
             <div class="relative mt-1 lg:w-96">
               <div
-                class="flex absolute inset-y-0 left-0 rtl:right-2 items-center pl-3 pointer-events-none">
+                class="flex absolute inset-y-0 left-0 rtl:right-2 items-center pl-3 pointer-events-none"
+              >
                 <svg
                   class="w-5 h-5 text-gray-500 dark:text-gray-400 rtl:rotate-90"
                   fill="currentColor"
                   viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     fill-rule="evenodd"
                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clip-rule="evenodd"></path>
+                    clip-rule="evenodd"
+                  ></path>
                 </svg>
               </div>
               <input
@@ -52,7 +58,8 @@
                 id="topbar-search"
                 class="bg-gray-50 border border-gray-300 rtl:px-9 text-gray-900 sm:text-sm rounded outline-none focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Search (Ctrl+K)"
-                ref="searchInput" />
+                ref="searchInput"
+              />
             </div>
           </form>
         </div>
@@ -63,7 +70,8 @@
             :key="extraLinkIndex"
             :to="localepath(extraLinkItem.link as string)"
             class="mx-2 hover:text-blue-700 text-gray-600 hidden md:block dark:text-gray-300"
-            active-class="!text-blue-700 dark:!text-blue-500">
+            active-class="!text-blue-700 dark:!text-blue-500"
+          >
             {{ extraLinkItem.title }}
           </NuxtLink>
 
@@ -85,7 +93,8 @@
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
-            class="sm:px-4 py-1 rounded sm:border ps-2 border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+            class="sm:px-4 py-1 rounded sm:border ps-2 border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
+          >
             <Icon name="mdi:account-circle-outline" size="23px" class="me-2" />
             <span class="hidden sm:flex">Login</span>
           </NuxtLink>
