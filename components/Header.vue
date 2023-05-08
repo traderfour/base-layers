@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky z-20 top-0">
+  <header id="main-header" class="sticky z-20 top-0">
     <Announcement />
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-1 dark:bg-gray-800">
       <div
@@ -77,36 +77,6 @@
 
           <CompanyMegaMenu />
 
-          <!-- <button
-            type="button"
-            class="hidden sm:inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-          >
-            <svg
-              aria-hidden="true"
-              class="mr-1 -ml-1 w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            New Widget
-          </button> -->
-          <!-- <button id="toggleSidebarMobileSearch" type="button"
-            class="p-2 text-gray-500 rounded lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-            <span class="sr-only">Search</span>
-
-            <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button> -->
           <LocaleTheme />
 
           <template v-if="userData">
@@ -119,15 +89,14 @@
             <!-- User Menu -->
             <UserInfoDropDown />
           </template>
-
           <!-- Login Button -->
           <NuxtLink
             v-if="!userData"
             to="/auth/sign"
-            class="px-4 py-1 rounded border border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
+            class="sm:px-4 py-1 rounded sm:border ps-2 border-blue-600 text-blue-600 dark:text-gray-200 ms-3 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
           >
             <Icon name="mdi:account-circle-outline" size="23px" class="me-2" />
-            Login
+            <span class="hidden sm:flex">Login</span>
           </NuxtLink>
         </div>
 
@@ -143,15 +112,14 @@ import { search } from "../composables/state";
 const { logo } = useRuntimeConfig().config;
 
 const localepath = useLocalePath();
-const userData = ref<User>();
+const userData = ref<User | unknown>();
 const searchInput = ref();
+
+let userStorage = useCookie("user").value;
+userData.value = userStorage ?? undefined;
 
 // color mode
 onBeforeMount(() => {
-  let userStorage = localStorage.getItem("user");
-  userData.value = userStorage
-    ? (JSON.parse(localStorage.getItem("user") as string) as User)
-    : undefined;
   // Ctrl K press to focus search input
   document.addEventListener("keydown", (event: any) => {
     if (
